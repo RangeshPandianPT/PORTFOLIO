@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Github, Linkedin, Mail, MapPin, Phone, ChevronDown, Instagram, Code } from 'lucide-react';
-import RangeshProfilePic from '/src/assets/rangesh-profile.jpg'; // Make sure this path is correct
+import RangeshProfilePic from '/src/assets/rangesh-profile.jpg'; 
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
