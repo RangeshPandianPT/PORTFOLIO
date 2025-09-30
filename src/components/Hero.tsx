@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Github, Linkedin, Mail, MapPin, Phone, ChevronDown, Instagram, Code } from 'lucide-react';
-import heroCodingImage from '@/assets/hero-coding.jpg';
+import RangeshProfilePic from '/src/assets/rangesh-profile.jpg'; // Make sure this path is correct
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -159,24 +159,25 @@ const Hero = () => {
           {/* Right Content - Professional Image */}
           <div className="flex justify-center lg:justify-end animate-slide-in-right">
             <div className="relative group">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden glass-effect floating-animation border border-border/20 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden glass-effect border border-border/20 ...">
                 <img 
-                  src={heroCodingImage} 
-                  alt="Professional developer workspace with MacBook displaying code"
+                  src={RangeshProfilePic}
+                  alt="Rangesh Pandian PT Profile Picture"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 group-hover:brightness-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/10 group-hover:from-primary/30 group-hover:to-accent/20 transition-all duration-500" />
                 <div className="absolute bottom-4 left-4 right-4 glass-effect p-4 rounded-lg border border-white/20 group-hover:border-white/40 transition-all duration-300 transform group-hover:scale-105">
-                  <p className="text-white text-sm font-medium animate-pulse-glow">"Code is poetry written in logic."</p>
-                  <p className="text-white/80 text-xs">"First, solve the problem. Then, write the code."</p>
+                  <p className="text-white text-sm font-medium">"Code is poetry written in logic."</p>
+                  {/* // <p className="text-white/80 text-xs">"First, solve the problem. Then, write the code."</p>  */}
                 </div>
               </div>
+
               {/* Enhanced Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-pulse hover:scale-125 transition-transform duration-300" />
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full animate-pulse hover:scale-125 transition-transform duration-300" style={{ animationDelay: '1s' }} />
-              <div className="absolute top-1/2 -right-6 w-3 h-3 bg-primary/50 rotate-45 animate-spin-slow" />
-              <div className="absolute bottom-1/3 -left-6 w-4 h-4 bg-accent/50 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
-              
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full hover:scale-125 transition-transform duration-300" />
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full hover:scale-125 transition-transform duration-300" />
+              <div className="absolute top-1/2 -right-6 w-3 h-3 bg-primary/50 rotate-45" />
+              <div className="absolute bottom-1/3 -left-6 w-4 h-4 bg-accent/50 rounded-full" />
+
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
             </div>
