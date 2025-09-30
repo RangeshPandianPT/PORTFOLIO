@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Github, Linkedin, Mail, MapPin, Phone, ChevronDown, Instagram, Code } from 'lucide-react';
-import RangeshProfilePic from '/src/assets/rangesh-profile.jpg'; 
+import RangeshProfilePic from '/src/assets/rangesh-profile.jpg'; // Make sure this path is correct
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -20,8 +20,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Enhanced Animated Background */}
+    // CHANGE 1: Adjusted padding for mobile
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden py-24 px-4 sm:px-6 md:py-32">
+      {/* Background elements (unchanged) */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/20 to-muted/30" />
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -49,7 +50,10 @@ const Hero = () => {
                 🚀 Building & Learning Every Day
               </Badge>
               <h1 className="text-5xl lg:text-7xl font-bold mb-2 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <span className="gradient-text hover:scale-105 transition-transform duration-300 inline-block">RANGESHPANDIAN PT</span>
+               {/* CHANGE 2: Added break-words and adjusted text size */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-2 break-words">
+                <span className="gradient-text">RANGESHPANDIAN PT</span>
+              </h1>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground mb-4 font-medium animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 Full Stack Developer • Data Scientist
