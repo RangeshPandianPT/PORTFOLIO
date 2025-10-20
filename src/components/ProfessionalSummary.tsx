@@ -54,7 +54,7 @@ const ProfessionalSummary = () => {
               className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 btn-hover-lift"
               asChild
             >
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1UF5bw8OyP3tB9WI_Y-_-KISl3yLT8PqK/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 <Download className="h-4 w-4 mr-2" />
                 Download Resume
               </a>
