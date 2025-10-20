@@ -1,238 +1,186 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { GraduationCap, Calendar, MapPin, Award, ExternalLink } from 'lucide-react';
+import { Menu, X, Download, Moon, Sun } from 'lucide-react';
+import { useTheme } from '@/contexts/ThemeContext';
 
-const Education = () => {
-  const education = [
-    {
-      degree: 'Bachelor of Technology (B.Tech)',
-      field: 'Computer Science and Engineering',
-      institution: 'SRM Institute of Science and Technology',
-      location: 'Chennai, India',
-      duration: '2024 - 2028',
-      status: 'Currently Pursuing',
-      highlights: [
-        'Focused on Software Development and Data Science',
-        'Relevant Coursework: Data Structures, Algorithms, Web Development',
-        'Active in coding competitions and tech events'
-      ]
-    },
-    {
-      degree: 'Higher Secondary Certificate (HSC)',
-      field: 'Computer Science',
-      institution: 'FAIRLANDS A FOUNDATION SCHOOL',
-      location: 'Theni',
-      duration: '2022 - 2024',
-      status: 'Completed',
-      highlights: [
-        'Specialized in Computer Science and Mathematics',
-        'Strong foundation in programming concepts',
-        'Achieved excellent academic performance'
-      ]
-    }
+const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+  const { theme, toggleTheme } = useTheme();
+
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'education', label: 'Education' },
+    { id: 'contact', label: 'Contact' }
   ];
 
-  const certifications = [
-    {
-      title: 'Full Stack Web Development',
-      issuer: 'Multiple Platforms',
-      year: '2025',
-      skills: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
-      link: 'https://drive.google.com/drive/folders/1wsS697trbYpm25r25858TX9lYW_u-fmV'
-    },
-    {
-      title: 'Data Science Fundamentals',
-      issuer: 'Online Certification',
-      year: '2025',
-      skills: ['Python', 'NumPy', 'Pandas', 'Data Visualization'],
-      link: 'https://drive.google.com/drive/folders/1wspB_B1Vdg65H0ddZqHmiOfbYLHSqEYt'
-    },
-    {
-      title: 'Job Simulation Project',
-      issuer: 'Professional Experience',
-      year: '2025',
-      skills: ['Real-world Application', 'Problem Solving', 'Industry Standards'],
-      link: 'https://drive.google.com/drive/folders/1FEoTYMcbEGWumTaU6ZPJe9vkksGEbUq0'
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => document.getElementById(item.id));
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(navItems[i].id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-  ];
+    setIsMenuOpen(false);
+  };
 
   return (
-    <section id="education" className="py-20 relative">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 glass-effect">
-            Academic Journey
-          </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Education & <span className="gradient-text">Certifications</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            My academic background and continuous learning journey in technology
-          </p>
-        </div>
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <button 
+            onClick={() => scrollToSection('home')}
+            className="text-xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
+          >
+            RP
+          </button>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {/* Education */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-              <GraduationCap className="h-6 w-6 text-primary" />
-              Formal Education
-            </h3>
-            
-            {education.map((edu, index) => (
-              <Card key={index} className="glass-effect border-border/50 hover:border-primary/30 transition-all duration-500 group hover:scale-105 hover:shadow-xl hover:shadow-primary/10 animate-fade-in">
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start justify-between flex-wrap gap-2">
-                      <Badge 
-                        variant={edu.status === 'Currently Pursuing' ? 'default' : 'secondary'}
-                        className={`transition-all duration-300 hover:scale-110 ${edu.status === 'Currently Pursuing' ? 'bg-primary/10 text-primary border-primary/20' : ''}`}
-                      >
-                        {edu.status}
-                      </Badge>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Calendar className="h-4 w-4" />
-                        <span>{edu.duration}</span>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="text-lg font-bold text-foreground mb-1 group-hover:text-primary group-hover:scale-105 transition-all duration-300">
-                        {edu.degree}
-                      </h4>
-                      <p className="text-muted-foreground font-medium mb-2">{edu.field}</p>
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <span className="font-medium">{edu.institution}</span>
-                        <div className="flex items-center gap-1">
-                          <MapPin className="h-3 w-3" />
-                          <span className="text-sm">{edu.location}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <h5 className="font-medium text-sm">Key Highlights:</h5>
-                      <ul className="space-y-1">
-                        {edu.highlights.map((highlight, hIndex) => (
-                          <li key={hIndex} className="flex items-start gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300 hover:translate-x-1">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0 group-hover:animate-pulse" />
-                            <span>{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`text-sm font-medium transition-colors duration-300 hover:text-primary relative ${
+                  activeSection === item.id ? 'text-primary' : 'text-muted-foreground'
+                }`}
+              >
+                {item.label}
+                {activeSection === item.id && (
+                  <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full" />
+                )}
+              </button>
             ))}
           </div>
 
-          {/* Certifications */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-              <Award className="h-6 w-6 text-accent" />
-              Certifications
-            </h3>
-            
-            {certifications.map((cert, index) => (
-              <Card key={index} className="glass-effect border-border/50 hover:border-accent/30 transition-all duration-500 group hover:scale-105 hover:shadow-xl hover:shadow-accent/10 animate-fade-in">
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start justify-between flex-wrap gap-2">
-                      <Badge variant="outline" className="border-accent/30 text-accent hover:scale-110 transition-transform duration-300">
-                        {cert.year}
-                      </Badge>
-                    </div>
-
-                    <div>
-                      <h4 className="text-lg font-bold text-foreground mb-1 group-hover:text-accent group-hover:scale-105 transition-all duration-300">
-                        {cert.title}
-                      </h4>
-                      <p className="text-muted-foreground font-medium">{cert.issuer}</p>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {cert.skills.map((skill, skillIndex) => (
-                        <Badge 
-                          key={skillIndex} 
-                          variant="outline" 
-                          className="text-xs glass-effect border-accent/20 hover:bg-accent/10 hover:scale-110 transition-all duration-300"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-
-                    {cert.link && (
-                      <Button 
-                        asChild 
-                        variant="outline" 
-                        size="sm" 
-                        className="w-full border-accent/30 hover:bg-accent/10 hover:border-accent/50 hover:scale-105 transition-all duration-300"
-                      >
-                        <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4" />
-                          View Certification
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-
-            {/* Learning Philosophy Card */}
-            <Card className="glass-effect border-primary/20 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group">
-              <CardContent className="p-6">
-                <h4 className="text-lg font-semibold mb-3 gradient-text group-hover:scale-105 transition-transform duration-300">Continuous Learning</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  I believe in lifelong learning and staying updated with the latest technologies. 
-                  Currently expanding my knowledge in cloud computing, DevOps, and advanced data science techniques.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <Badge variant="outline" className="border-primary/20 hover:scale-110 hover:bg-primary/10 transition-all duration-300">Self-Motivated</Badge>
-                  <Badge variant="outline" className="border-accent/20 hover:scale-110 hover:bg-accent/10 transition-all duration-300">Tech Enthusiast</Badge>
-                  <Badge variant="outline" className="border-primary/20 hover:scale-110 hover:bg-primary/10 transition-all duration-300">Problem Solver</Badge>
-                </div>
-              </CardContent>
-            </Card>
+          {/* Action Buttons */}
+          <div className="hidden md:flex items-center gap-4">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="glass-effect hover:bg-primary/10 transition-all duration-300"
+            >
+              {theme === 'light' ? (
+                <Moon className="h-4 w-4" />
+              ) : (
+                <Sun className="h-4 w-4" />
+              )}
+            </Button>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="glass-effect border-primary/30 hover:bg-primary/10"
+              asChild
+            >
+              <a href="https://drive.google.com/file/d/1UF5bw8OyP3tB9WI_Y-_-KISl3yLT8PqK/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                <Download className="h-4 w-4 mr-2" />
+                Resume
+              </a>
+            </Button>
+            <Button 
+              size="sm"
+              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300"
+              onClick={() => scrollToSection('contact')}
+            >
+              Hire Me
+            </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
         </div>
 
-        {/* Academic Stats */}
-        <div className="grid md:grid-cols-4 gap-4">
-          <Card className="glass-effect border-primary/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group">
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">2028</div>
-              <div className="text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">Expected Graduation</div>
-            </CardContent>
-          </Card>
-          
-          <Card className="glass-effect border-accent/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-accent/20 transition-all duration-500 group">
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">3+</div>
-              <div className="text-sm text-muted-foreground group-hover:text-accent transition-colors duration-300">Certifications</div>
-            </CardContent>
-          </Card>
-          
-          <Card className="glass-effect border-primary/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group">
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">CSE</div>
-              <div className="text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">Specialization</div>
-            </CardContent>
-          </Card>
-          
-          <Card className="glass-effect border-accent/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-accent/20 transition-all duration-500 group">
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">4+</div>
-              <div className="text-sm text-muted-foreground group-hover:text-accent transition-colors duration-300">Years of Study</div>
-            </CardContent>
-          </Card>
-        </div>
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-border/50">
+            <div className="flex flex-col space-y-3">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-left py-2 px-3 rounded-md transition-colors duration-300 ${
+                    activeSection === item.id
+                      ? 'text-primary bg-primary/10'
+                      : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+              
+              <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={toggleTheme}
+                  className="glass-effect hover:bg-primary/10 justify-start"
+                >
+                  {theme === 'light' ? (
+                    <>
+                      <Moon className="h-4 w-4 mr-2" />
+                      Dark Mode
+                    </>
+                  ) : (
+                    <>
+                      <Sun className="h-4 w-4 mr-2" />
+                      Light Mode
+                    </>
+                  )}
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="glass-effect border-primary/30"
+                  asChild
+                >
+                  <a href="https://drive.google.com/file/d/1UF5bw8OyP3tB9WI_Y-_-KISl3yLT8PqK/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <Download className="h-4 w-4 mr-2" />
+                    Download Resume
+                  </a>
+                </Button>
+                <Button 
+                  size="sm"
+                  className="bg-gradient-to-r from-primary to-accent"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  Hire Me
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
-    </section>
+    </nav>
   );
 };
 
-export default Education;
+export default Navigation;
