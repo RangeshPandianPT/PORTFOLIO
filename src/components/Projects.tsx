@@ -47,15 +47,15 @@ const Projects = () => {
         <div className="absolute bottom-40 left-40 w-2 h-2 bg-primary/40 rounded-full animate-bounce" style={{animationDelay: '2s'}} />
       </div>
       
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-pulse-glow">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-pulse-glow text-xs sm:text-sm">
             💻 Portfolio
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up px-4 break-words" style={{animationDelay: '0.2s'}}>
             <span className="gradient-text hover:scale-105 transition-transform duration-300 inline-block">Featured Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up px-4" style={{animationDelay: '0.4s'}}>
             Showcasing innovative solutions and technical expertise through featured projects and cutting-edge applications
           </p>
         </div>
@@ -144,21 +144,21 @@ const Projects = () => {
         </div>
 
         {/* Workspace Showcase */}
-        <div className="mt-16 mb-12">
+        <div className="mt-12 sm:mt-16 mb-8 sm:mb-12 px-4">
           <div className="relative rounded-2xl overflow-hidden glass-effect border border-border/20 max-w-4xl mx-auto">
             <img 
               src={workspaceImage} 
               alt="Modern developer workspace with iMac setup"
-              className="w-full h-64 lg:h-80 object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-cover hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-accent/20" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="glass-effect p-6 rounded-xl border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-2">Professional Development Environment</h3>
-                <p className="text-white/90 text-sm leading-relaxed">
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
+              <div className="glass-effect p-4 sm:p-6 rounded-xl border border-white/20">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2">Professional Development Environment</h3>
+                <p className="text-white/90 text-xs sm:text-sm leading-relaxed">
                   Equipped with modern tools and technologies to deliver high-quality, scalable solutions for complex challenges.
                 </p>
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-1.5 sm:gap-2 mt-3 sm:mt-4 flex-wrap">
                   <Badge variant="outline" className="border-white/30 text-white bg-white/10">Modern Stack</Badge>
                   <Badge variant="outline" className="border-white/30 text-white bg-white/10">Clean Code</Badge>
                   <Badge variant="outline" className="border-white/30 text-white bg-white/10">Best Practices</Badge>
@@ -169,14 +169,14 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
+        <div className="text-center px-4">
           <Card className="glass-effect border-primary/20 bg-gradient-to-r from-primary/5 to-accent/5 max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Interested in collaboration?</h3>
-              <p className="text-muted-foreground mb-6">
+            <CardContent className="p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 break-words">Interested in collaboration?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground mb-6">
                 I'm always open to discussing new projects, innovative ideas, and opportunities to create something amazing together.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center">
                 <Button 
                   className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 glow-effect"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

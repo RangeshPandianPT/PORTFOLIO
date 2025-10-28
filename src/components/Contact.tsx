@@ -174,25 +174,25 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 glass-effect">
+    <section id="contact" className="py-16 sm:py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <Badge variant="outline" className="mb-4 glass-effect text-xs sm:text-sm">
             Get In Touch
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 break-words">
             Let's <span className="gradient-text">Connect</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Contact Information</h3>
               <div className="space-y-4">
                 {contactInfo.map((contact, index) => (
                   <Card key={index} className="glass-effect border-border/50 hover:border-primary/30 transition-all duration-300 group">
@@ -220,8 +220,8 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
-              <div className="flex gap-4">
+              <h4 className="text-base sm:text-lg font-semibold mb-4">Follow Me</h4>
+              <div className="flex gap-3 sm:gap-4 flex-wrap">
                 {socialLinks.map((social, index) => (
                   <Button
                     key={index}
@@ -241,12 +241,12 @@ const Contact = () => {
 
             {/* Availability Status */}
             <Card className="glass-effect border-primary/20">
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                  <span className="font-semibold gradient-text">Available for Work</span>
+                  <span className="text-sm sm:text-base font-semibold gradient-text">Available for Work</span>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   I'm currently open to new opportunities and exciting projects. 
                   Whether you're looking for a full-time developer or need help with a specific project, 
                   I'd love to hear from you!
@@ -264,11 +264,11 @@ const Contact = () => {
           {/* Contact Form */}
           <div>
             <Card className="glass-effect border-border/50">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Send Me a Message</h3>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium">
                         Name *

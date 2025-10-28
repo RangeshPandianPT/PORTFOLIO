@@ -64,20 +64,20 @@ const Skills = () => {
         <div className="absolute bottom-20 right-10 text-2xl animate-bounce" style={{animationDelay: '4s'}}>⚡</div>
       </div>
       
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-pulse-glow">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-pulse-glow text-xs sm:text-sm">
             💻 Technical Expertise
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 animate-fade-in-up px-4 break-words" style={{animationDelay: '0.2s'}}>
             Skills & <span className="gradient-text hover:scale-105 transition-transform duration-300 inline-block">Technologies</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up px-4" style={{animationDelay: '0.4s'}}>
             A comprehensive overview of my technical skills and proficiency levels
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {skillCategories.map((category, categoryIndex) => (
             <Card 
               key={categoryIndex} 
@@ -87,8 +87,8 @@ const Skills = () => {
               {/* Background gradient on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              <CardContent className="p-4 relative z-10">
-                <h3 className="text-lg font-bold mb-4 gradient-text group-hover:scale-105 transition-transform duration-300">{category.title}</h3>
+              <CardContent className="p-3 sm:p-4 relative z-10">
+                <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 gradient-text group-hover:scale-105 transition-transform duration-300 break-words">{category.title}</h3>
                 
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
@@ -136,9 +136,9 @@ const Skills = () => {
         </div>
 
         {/* Additional Skills */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-8">Additional Technologies</h3>
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="mt-12 sm:mt-16">
+          <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 px-4">Additional Technologies</h3>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 px-4">
             {[
               'Flutter', 'MongoDB', 'Express.js', 'Node.js', 'Git', 'Agile', 
               'REST APIs', 'Responsive Design', 'Data Visualization', 'Machine Learning'
@@ -156,24 +156,24 @@ const Skills = () => {
         </div>
 
         {/* Skills Summary */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 px-4">
           <Card className="glass-effect border-primary/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group">
-            <CardContent className="p-6">
-              <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
+            <CardContent className="p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
               <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300">Programming Languages</div>
             </CardContent>
           </Card>
           
           <Card className="glass-effect border-accent/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-accent/20 transition-all duration-500 group">
-            <CardContent className="p-6">
-              <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">15+</div>
-              <div className="text-muted-foreground group-hover:text-accent transition-colors duration-300">Frameworks & Tools</div>
+            <CardContent className="p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">15+</div>
+              <div className="text-sm sm:text-base text-muted-foreground group-hover:text-accent transition-colors duration-300">Frameworks & Tools</div>
             </CardContent>
           </Card>
           
           <Card className="glass-effect border-primary/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group">
-            <CardContent className="p-6">
-              <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">5+</div>
+            <CardContent className="p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">5+</div>
               <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300">Completed Projects</div>
             </CardContent>
           </Card>

@@ -44,15 +44,15 @@ const About = () => {
         <div className="absolute top-1/2 left-10 w-2 h-2 bg-primary/30 rounded-full animate-pulse" style={{animationDelay: '1s'}} />
       </div>
       
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-pulse-glow">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-pulse-glow text-xs sm:text-sm">
             👨‍💻 About Me
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 animate-fade-in-up px-4 break-words" style={{animationDelay: '0.2s'}}>
             <span className="gradient-text hover:scale-105 transition-transform duration-300 inline-block">About Me</span> & My Journey
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
             Professional Full Stack Developer with <strong className="text-foreground">2+ years of hands-on experience</strong> 
             building scalable web applications and AI-driven solutions. Specialized in React ecosystem, Python data science, 
             and modern development practices. Successfully delivered <strong className="text-foreground">15+ production-ready projects</strong> 
@@ -61,12 +61,12 @@ const About = () => {
           </p>
           
           {/* Professional Image */}
-          <div className="max-w-md mx-auto mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+          <div className="max-w-md mx-auto mb-8 sm:mb-12 animate-fade-in-up px-4" style={{animationDelay: '0.6s'}}>
             <div className="relative rounded-2xl overflow-hidden glass-effect border border-border/20 group hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
               <img 
                 src={professionalWorkImage} 
                 alt="Professional developer working on MacBook Pro"
-                className="w-full h-64 object-cover hover:scale-110 transition-transform duration-700 group-hover:brightness-110"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover hover:scale-110 transition-transform duration-700 group-hover:brightness-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent group-hover:from-primary/20 transition-all duration-500" />
               <div className="absolute bottom-4 left-4 right-4">
@@ -82,10 +82,10 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Strengths */}
-          <div className="space-y-8 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
-            <h3 className="text-2xl font-bold mb-6 gradient-text">Core Strengths</h3>
+          <div className="space-y-6 sm:space-y-8 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 gradient-text">Core Strengths</h3>
             <div className="space-y-6">
               {strengths.map((strength, index) => (
                 <Card 
@@ -113,8 +113,8 @@ const About = () => {
           </div>
 
           {/* Languages */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold mb-6">Languages</h3>
+          <div className="space-y-6 sm:space-y-8">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Languages</h3>
             <div className="space-y-6">
               {languages.map((language, index) => (
                 <div key={index} className="space-y-2">

@@ -58,25 +58,25 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 relative">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 glass-effect">
+    <section id="education" className="py-16 sm:py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <Badge variant="outline" className="mb-4 glass-effect text-xs sm:text-sm">
             Academic Journey
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 break-words">
             Education & <span className="gradient-text">Certifications</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             My academic background and continuous learning journey in technology
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {/* Education */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-              <GraduationCap className="h-6 w-6 text-primary" />
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-3">
+              <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
               Formal Education
             </h3>
             
@@ -129,9 +129,9 @@ const Education = () => {
           </div>
 
           {/* Certifications */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-              <Award className="h-6 w-6 text-accent" />
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-3">
+              <Award className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
               Certifications
             </h3>
             
@@ -184,9 +184,9 @@ const Education = () => {
 
             {/* Learning Philosophy Card */}
             <Card className="glass-effect border-primary/20 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group">
-              <CardContent className="p-6">
-                <h4 className="text-lg font-semibold mb-3 gradient-text group-hover:scale-105 transition-transform duration-300">Continuous Learning</h4>
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="p-4 sm:p-6">
+                <h4 className="text-base sm:text-lg font-semibold mb-3 gradient-text group-hover:scale-105 transition-transform duration-300">Continuous Learning</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   I believe in lifelong learning and staying updated with the latest technologies. 
                   Currently expanding my knowledge in cloud computing, DevOps, and advanced data science techniques.
                 </p>
@@ -201,32 +201,32 @@ const Education = () => {
         </div>
 
         {/* Academic Stats */}
-        <div className="grid md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           <Card className="glass-effect border-primary/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group">
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">2028</div>
-              <div className="text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">Expected Graduation</div>
+            <CardContent className="p-3 sm:p-4">
+              <div className="text-xl sm:text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">2028</div>
+              <div className="text-xs sm:text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">Expected Graduation</div>
             </CardContent>
           </Card>
           
           <Card className="glass-effect border-accent/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-accent/20 transition-all duration-500 group">
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">3+</div>
-              <div className="text-sm text-muted-foreground group-hover:text-accent transition-colors duration-300">Certifications</div>
+            <CardContent className="p-3 sm:p-4">
+              <div className="text-xl sm:text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">3+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground group-hover:text-accent transition-colors duration-300">Certifications</div>
             </CardContent>
           </Card>
           
           <Card className="glass-effect border-primary/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group">
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">CSE</div>
-              <div className="text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">Specialization</div>
+            <CardContent className="p-3 sm:p-4">
+              <div className="text-xl sm:text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">CSE</div>
+              <div className="text-xs sm:text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">Specialization</div>
             </CardContent>
           </Card>
           
           <Card className="glass-effect border-accent/20 text-center hover:scale-105 hover:shadow-lg hover:shadow-accent/20 transition-all duration-500 group">
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">4+</div>
-              <div className="text-sm text-muted-foreground group-hover:text-accent transition-colors duration-300">Years of Study</div>
+            <CardContent className="p-3 sm:p-4">
+              <div className="text-xl sm:text-2xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">4+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground group-hover:text-accent transition-colors duration-300">Years of Study</div>
             </CardContent>
           </Card>
         </div>

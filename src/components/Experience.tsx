@@ -69,16 +69,16 @@ const Experience = () => {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-accent/10 to-primary/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
       
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 text-xs sm:text-sm">
             <TrendingUp className="w-3 h-3 mr-1" />
             Career Journey
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 break-words">
             Professional <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             A timeline of my professional journey and contributions in the tech industry
           </p>
         </div>
@@ -100,16 +100,16 @@ const Experience = () => {
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   {/* Enhanced Timeline Dot with Icon */}
-                  <div className="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 z-20">
-                    <div className="w-14 h-14 bg-gradient-to-br bg-card border-4 border-primary/20 rounded-full flex items-center justify-center animate-pulse-glow hover:scale-110 transition-transform duration-300">
-                      <div className={`w-8 h-8 bg-gradient-to-r ${exp.color} rounded-full flex items-center justify-center`}>
-                        <IconComponent className="w-4 h-4 text-white" />
+                  <div className="absolute left-2 sm:left-4 lg:left-1/2 lg:-translate-x-1/2 z-20">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-br bg-card border-2 sm:border-4 border-primary/20 rounded-full flex items-center justify-center animate-pulse-glow hover:scale-110 transition-transform duration-300">
+                      <div className={`w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 bg-gradient-to-r ${exp.color} rounded-full flex items-center justify-center`}>
+                        <IconComponent className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                       </div>
                     </div>
                   </div>
 
                   {/* Enhanced Content Card */}
-                  <div className={`w-full lg:w-5/12 ml-20 lg:ml-0 ${index % 2 === 0 ? '' : 'lg:mr-20'}`}>
+                  <div className={`w-full lg:w-5/12 ml-14 sm:ml-20 lg:ml-0 ${index % 2 === 0 ? '' : 'lg:mr-20'}`}>
                     <Card className="glass-effect border-border/50 hover:border-primary/40 transition-all duration-500 group hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2">
                       <CardContent className="p-6 relative overflow-hidden">
                         {/* Subtle Background Gradient */}
@@ -169,23 +169,23 @@ const Experience = () => {
         </div>
 
         {/* Enhanced Call to Action */}
-        <div className="text-center mt-20 animate-fade-in-up" style={{animationDelay: '1s'}}>
-          <Card className="glass-effect border-primary/20 inline-block hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 group">
-            <CardContent className="p-8 relative overflow-hidden">
+        <div className="text-center mt-12 sm:mt-16 lg:mt-20 animate-fade-in-up px-4" style={{animationDelay: '1s'}}>
+          <Card className="glass-effect border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 group">
+            <CardContent className="p-6 sm:p-8 relative overflow-hidden">
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 group-hover:from-primary/10 group-hover:to-accent/10 transition-all duration-500"></div>
               
               <div className="relative z-10">
                 <div className="flex items-center justify-center mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center animate-pulse-glow">
-                    <TrendingUp className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center animate-pulse-glow">
+                    <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 gradient-text">Looking for New Opportunities</h3>
-                <p className="text-muted-foreground mb-6 text-lg">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 gradient-text break-words">Looking for New Opportunities</h3>
+                <p className="text-muted-foreground mb-6 text-base sm:text-lg">
                   I'm currently open to full-time positions and exciting projects
                 </p>
-                <div className="flex gap-3 justify-center flex-wrap">
+                <div className="flex gap-2 sm:gap-3 justify-center flex-wrap">
                   <Badge variant="outline" className="border-primary/30 hover:bg-primary/10 px-4 py-2 text-sm transition-all duration-300">
                     ✨ Available
                   </Badge>

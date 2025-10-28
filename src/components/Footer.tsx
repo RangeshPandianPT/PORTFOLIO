@@ -28,17 +28,17 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-t from-secondary/20 to-background border-t border-border/50">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1">
             <div className="mb-4">
-              <h3 className="text-2xl font-bold gradient-text mb-2">RANGESHPANDIAN PT</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl sm:text-2xl font-bold gradient-text mb-2 break-words">RANGESHPANDIAN PT</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Full Stack Developer & Data Science Enthusiast
               </p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3 flex-wrap">
               {socialLinks.map((social, index) => (
                 <Button
                   key={index}
@@ -58,7 +58,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="md:col-span-1">
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-sm sm:text-base font-semibold mb-3 sm:mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -75,7 +75,7 @@ const Footer = () => {
 
           {/* Skills Highlight */}
           <div className="md:col-span-1">
-            <h4 className="font-semibold mb-4">Skills</h4>
+            <h4 className="text-sm sm:text-base font-semibold mb-3 sm:mb-4">Skills</h4>
             <div className="flex flex-wrap gap-2">
               {['React', 'Python', 'JavaScript', 'Node.js', 'Data Science'].map((skill, index) => (
                 <Badge
@@ -91,7 +91,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="md:col-span-1">
-            <h4 className="font-semibold mb-4">Get In Touch</h4>
+            <h4 className="text-sm sm:text-base font-semibold mb-3 sm:mb-4">Get In Touch</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>📧 rangeshpandian@gmail.com</p>
               <p>📱 +91 8190901516</p>
@@ -107,11 +107,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-border/50">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border/50">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground text-center">
               <span>© {currentYear} RANGESHPANDIAN PT. Made with</span>
-              <Heart className="h-4 w-4 text-red-500 fill-current" />
+              <Heart className="h-3 w-3 sm:h-4 sm:w-4 text-red-500 fill-current" />
               <span>and lots of ☕</span>
             </div>
             
@@ -119,9 +119,9 @@ const Footer = () => {
               variant="outline"
               size="sm"
               onClick={scrollToTop}
-              className="glass-effect border-primary/30 hover:bg-primary/10 transition-all duration-300"
+              className="glass-effect border-primary/30 hover:bg-primary/10 transition-all duration-300 text-xs sm:text-sm"
             >
-              <ArrowUp className="h-4 w-4 mr-2" />
+              <ArrowUp className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
               Back to Top
             </Button>
           </div>
