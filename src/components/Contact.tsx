@@ -46,12 +46,19 @@ const Contact = () => {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
+      // Debug: Log what we're getting from environment
+      console.log('🔍 Environment check:', {
+        serviceId: serviceId || 'UNDEFINED',
+        templateId: templateId || 'UNDEFINED',
+        allEnvVars: import.meta.env
+      });
+
       // Validate credentials
       if (!serviceId || serviceId === 'YOUR_SERVICE_ID') {
-        throw new Error('EmailJS Service ID not configured');
+        throw new Error(`EmailJS Service ID not configured. Got: ${serviceId || 'undefined'}`);
       }
       if (!templateId || templateId === 'YOUR_TEMPLATE_ID') {
-        throw new Error('EmailJS Template ID not configured');
+        throw new Error(`EmailJS Template ID not configured. Got: ${templateId || 'undefined'}`);
       }
 
       // Debug logging
