@@ -112,11 +112,11 @@ const Projects = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3 pt-2">
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
                     <Button 
                       variant="outline" 
                       size="sm"
-                      className="flex-1 glass-effect border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
+                      className="w-full sm:flex-1 glass-effect border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
                       asChild
                     >
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -127,7 +127,7 @@ const Projects = () => {
                     {project.liveUrl && project.liveUrl !== '#' && (
                       <Button 
                         size="sm"
-                        className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300"
+                        className="w-full sm:flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300"
                         asChild
                       >
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
