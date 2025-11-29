@@ -20,7 +20,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden py-20 px-4 sm:px-6 lg:py-32">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-12 px-4 sm:px-6 lg:pt-24 lg:pb-16">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/20 to-muted/30" />
       <div className="absolute inset-0">
@@ -48,7 +48,7 @@ const Hero = () => {
               <Badge variant="outline" className="mb-4 text-xs sm:text-sm glass-effect border-primary/30 hover:border-primary/50 hover:scale-105 transition-all duration-300 animate-pulse-glow">
                 🚀 Building & Learning Every Day
               </Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 break-words leading-tight" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 leading-tight whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
                 <span className="gradient-text">RANGESHPANDIAN PT</span>
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-3 lg:mb-4 font-medium animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
