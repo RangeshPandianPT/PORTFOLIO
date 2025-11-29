@@ -46,33 +46,46 @@ const About = () => {
       
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
-          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-pulse-glow text-xs sm:text-sm">
+          <Badge variant="outline" className="mb-4 glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 text-xs sm:text-sm">
             👨‍💻 About Me
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 animate-fade-in-up px-4 break-words" style={{animationDelay: '0.2s'}}>
-            <span className="gradient-text hover:scale-105 transition-transform duration-300 inline-block">About Me</span> & My Journey
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 break-words">
+            About Me & My <span className="gradient-text">Journey</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
-            Professional Full Stack Developer with <strong className="text-foreground">2+ years of hands-on experience</strong> 
-            building scalable web applications and AI-driven solutions. Specialized in React ecosystem, Python data science, 
-            and modern development practices. Successfully delivered <strong className="text-foreground">15+ production-ready projects</strong> 
-            with measurable business impact, including a 40% performance improvement in e-commerce platforms and 
-            AI models achieving 85%+ accuracy in agricultural predictions.
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+            My professional background and the experiences that shaped my development journey
           </p>
-          
-          {/* Professional Image */}
-          <div className="max-w-md mx-auto mb-8 sm:mb-12 animate-fade-in-up px-4" style={{animationDelay: '0.6s'}}>
-            <div className="relative rounded-2xl overflow-hidden glass-effect border border-border/20 group hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
-              <img 
-                src={professionalWorkImage} 
-                alt="Professional developer working on MacBook Pro"
-                className="w-full h-48 sm:h-56 md:h-64 object-cover hover:scale-110 transition-transform duration-700 group-hover:brightness-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent group-hover:from-primary/20 transition-all duration-500" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <Badge variant="outline" className="glass-effect border-white/30 text-white bg-white/10 hover:scale-105 transition-transform duration-300 animate-pulse-glow">
-                  ✨ Passionate Developer
-                </Badge>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-16">
+          {/* Left Content - Professional Story */}
+          <div className="space-y-6 lg:space-y-8 animate-fade-in-up">
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 gradient-text">Professional Full Stack Developer</h3>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
+                With <strong className="text-foreground">2+ years of hands-on experience</strong> building scalable web applications and AI-driven solutions. Specialized in React ecosystem, Python data science, and modern development practices.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                Successfully delivered <strong className="text-foreground">15+ production-ready projects</strong> with measurable business impact, including a 40% performance improvement in e-commerce platforms and AI models achieving 85%+ accuracy in agricultural predictions.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Content - Professional Image */}
+          <div className="flex justify-center lg:justify-end animate-slide-in-right">
+            <div className="relative group max-w-md w-full">
+              <div className="rounded-2xl overflow-hidden glass-effect border border-border/20 group-hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
+                <img 
+                  src={professionalWorkImage} 
+                  alt="Professional developer working on MacBook Pro"
+                  className="w-full h-48 sm:h-56 md:h-64 object-cover hover:scale-110 transition-transform duration-700 group-hover:brightness-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent group-hover:from-primary/20 transition-all duration-500" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <Badge variant="outline" className="glass-effect border-white/30 text-white bg-white/10 hover:scale-105 transition-transform duration-300">
+                    ✨ Passionate Developer
+                  </Badge>
+                </div>
               </div>
               
               {/* Decorative elements */}
