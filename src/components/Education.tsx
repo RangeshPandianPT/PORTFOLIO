@@ -19,6 +19,19 @@ const Education = () => {
       ]
     },
     {
+      degree: 'Bachelor of Science (BS)',
+      field: 'Data Science',
+      institution: 'Indian Institute of Technology, Madras',
+      location: 'Chennai, India',
+      duration: 'Sep 2025 - Oct 2029',
+      status: 'Currently Pursuing',
+      highlights: [
+        'Prestigious IIT curriculum focused on Data Science',
+        'Advanced coursework in Machine Learning and Statistics',
+        'Research opportunities in AI and Data Analytics'
+      ]
+    },
+    {
       degree: 'Higher Secondary Certificate (HSC)',
       field: 'Computer Science',
       institution: 'FAIRLANDS A FOUNDATION SCHOOL',
