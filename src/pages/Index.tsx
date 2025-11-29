@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
+import About from '@/components/About';
 import TechStack from '@/components/TechStack';
 import Experience from '@/components/Experience';
 import ProjectCaseStudies from '@/components/ProjectCaseStudies';
@@ -18,6 +19,7 @@ const Index = () => {
         <section id="home">
           <Hero />
         </section>
+        <About />
         <TechStack />
         <Experience />
         <ProjectCaseStudies />
@@ -33,3 +35,4 @@ const Index = () => {
 };
 
 export default Index;
+
