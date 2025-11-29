@@ -5,59 +5,48 @@ import { Calendar, MapPin, ExternalLink, TrendingUp, Code, Brain } from 'lucide-
 const Experience = () => {
   const experiences = [
     {
-      company: 'Elevate Labs',
-      position: 'AIML Intern',
-      duration: 'July - August',
-      location: 'Bengaluru',
+      company: 'EduSkills Foundation®',
+      position: 'AWS CLOUD VIRTUAL INTERNSHIP',
+      duration: 'Nov 2025 - Present',
+      location: 'Remote',
       type: 'Internship',
-      description: 'Developed an AI-powered stock market tracker using machine learning algorithms. Implemented predictive models for market analysis and real-time tracking capabilities.',
-      technologies: ['AIML', 'Stock Market Analysis', 'Predictive Modeling', 'Machine Learning'],
+      description: 'Working with Amazon Web Services (AWS) cloud technologies. Gaining hands-on experience with cloud infrastructure, services, and modern cloud development practices.',
+      technologies: ['Amazon Web Services (AWS)', 'Cloud Computing', 'Cloud Infrastructure', 'Virtual Internship'],
       icon: TrendingUp,
-      color: 'from-blue-500 to-purple-600'
+      color: 'from-orange-500 to-yellow-600'
     },
     {
-      company: 'Edunet powered by IBM',
-      position: 'AIML Intern',
-      duration: 'July - August',
-      location: 'Bengaluru',
-      type: 'Internship',
-      description: 'Built a smart irrigation system using artificial intelligence and machine learning. Developed intelligent water management solutions with automated decision-making capabilities.',
-      technologies: ['AIML', 'IoT', 'Smart Systems', 'Automation'],
-      icon: Brain,
-      color: 'from-green-500 to-teal-600'
-    },
-    {
-      company: 'CodTech Solutions',
-      position: 'Web Developer Intern',
-      duration: 'June - July',
-      location: 'Hyderabad',
-      type: 'Internship',
-      description: 'Focused on frontend development using modern technologies. Designed user interfaces with performance and improved application functionality.',
-      technologies: ['Frontend', 'UI/UX', 'Performance Optimization'],
-      icon: Code,
-      color: 'from-orange-500 to-red-600'
-    },
-    {
-      company: 'Future Interns',
-      position: 'Full Stack Developer',
-      duration: 'June - July',
-      location: 'Bengaluru',
-      type: 'Internship', 
-      description: 'Built and maintained full-stack web applications using React.js, Node.js, Express.js and MongoDB. Developed and optimized applications with enhanced user experience and improved application scalability.',
-      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+      company: 'Coding Ninjas 10x SRM',
+      position: 'Technical Team Member',
+      duration: 'Oct 2025 - Present',
+      location: 'SRM University, Chennai, Tamil Nadu, India',
+      type: 'Team Member',
+      description: 'As a Web Developer on the technical team, I\'m the one who brings our club\'s ideas to life on the web! I love diving into code to build cool features for our website, whether it\'s making event sign-ups seamless or creating interactive elements.',
+      technologies: ['Web Development', 'Full-Stack Development', 'Team Collaboration', 'Technical Leadership'],
       icon: Code,
       color: 'from-purple-500 to-pink-600'
     },
     {
-      company: 'CodeAlpha',
-      position: 'Frontend Developer',
-      duration: 'June - July',
-      location: 'Lucknow',
+      company: 'Edunet Foundation',
+      position: 'Green Skills using AI technologies',
+      duration: 'Jul 2025 - Aug 2025',
+      location: 'Bengaluru, Karnataka, India',
       type: 'Internship',
-      description: 'Focused on frontend development using modern technologies like JavaScript, HTML, CSS. Built innovative frontend frameworks with real-time data and 50% performance improvement in loading times.',
-      technologies: ['JavaScript', 'HTML', 'CSS', 'Performance Optimization'],
-      icon: Code,
-      color: 'from-cyan-500 to-blue-600'
+      description: 'Focused on developing green technologies using artificial intelligence. Worked on sustainable AI solutions and gained expertise in environmentally conscious technology development.',
+      technologies: ['Artificial Intelligence (AI)', 'Machine Learning', 'Green Technology', 'Sustainable Development'],
+      icon: Brain,
+      color: 'from-green-500 to-teal-600'
+    },
+    {
+      company: 'ELEVATE LABS',
+      position: 'AI ML',
+      duration: 'Jun 2025 - Jul 2025',
+      location: 'Bengaluru, Karnataka, India',
+      type: 'Internship',
+      description: 'Developed AI and Machine Learning solutions at ELEVATE LABS. Gained practical experience in AI model development, data analysis, and implementing machine learning algorithms for real-world applications.',
+      technologies: ['Artificial Intelligence (AI)', 'Machine Learning', 'Data Analysis', 'Model Development'],
+      icon: Brain,
+      color: 'from-blue-500 to-purple-600'
     }
   ];
 
