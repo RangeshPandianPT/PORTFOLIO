@@ -17,19 +17,6 @@ const ProjectCaseStudies = () => {
       githubUrl: '#',
       liveUrl: 'https://harv-ai.netlify.app/',
       featured: true
-    },
-    {
-      title: 'Alpha AI - Stock Market Prediction',
-      problem: 'Investors needed accurate, data-driven insights for stock market trends to make informed decisions.',
-      solution: 'Built an LSTM neural network model with interactive web interface for real-time stock price prediction and trend analysis.',
-      impact: [
-        { metric: '85% Accuracy', description: 'in price trend predictions' },
-        { metric: '40% Faster', description: 'analysis compared to traditional methods' }
-      ],
-      technologies: ['Python', 'LSTM', 'TensorFlow', 'React', 'Real-time Data APIs'],
-      githubUrl: 'https://github.com/RangeshPandianPT/Stock-Price-Trend-Prediction-with-LSTM.git',
-      liveUrl: 'https://alpha-trendai.netlify.app/',
-      featured: true
     }
   ];
 
