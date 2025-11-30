@@ -7,6 +7,15 @@ import workspaceImage from '@/assets/workspace-setup.jpg';
 const Projects = () => {
   const projects = [
     {
+      title: 'EcoLife',
+      description: 'EcoLife is a smart sustainability platform designed to help individuals make healthier, cost-efficient, and eco-friendly food choices. Most consumers today make decisions based only on price and taste, without realizing the hidden environmental impact or nutritional quality of their meals. EcoLife solves these problems by combining AI-powered planning and product transparency into a single, easy-to-use app that helps with meal planning, grocery management, and reducing food waste.',
+      technologies: ['AI', 'Sustainability Tech', 'React', 'Python', 'Data Analysis', 'Mobile App', 'Environmental Tech'],
+      githubUrl: '#', // Add GitHub URL when available
+      liveUrl: '#', // Add live URL when available
+      type: 'AI/Sustainability',
+      featured: true
+    },
+    {
       title: 'HarvAI',
       description: 'An intelligent agricultural assistant designed to empower small-scale farmers with AI-driven insights. From smart irrigation scheduling to pest prediction and crop yield forecasting, HarvAI harnesses the power of machine learning and real-time data to boost productivity, reduce resource usage, and support sustainable farming practices. With a user-friendly interface and local language support, HarvAI bridges the gap between traditional farming and modern agri-tech.',
       technologies: ['AI', 'Machine Learning', 'Agriculture Tech', 'Python', 'Data Analysis', 'IoT', 'Real-time Data'],
