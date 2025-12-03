@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-t from-secondary/20 to-background border-t border-border/50">
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1">
             <div className="mb-4">
@@ -71,22 +71,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Skills Highlight */}
-          <div className="md:col-span-1">
-            <h4 className="text-sm sm:text-base font-semibold mb-3 sm:mb-4">Skills</h4>
-            <div className="flex flex-wrap gap-2">
-              {['React', 'Python', 'JavaScript', 'Node.js', 'Data Science'].map((skill, index) => (
-                <Badge
-                  key={index}
-                  variant="outline"
-                  className="text-xs glass-effect border-primary/20 hover:bg-primary/10 transition-colors"
-                >
-                  {skill}
-                </Badge>
-              ))}
-            </div>
           </div>
 
           {/* Contact Info */}
